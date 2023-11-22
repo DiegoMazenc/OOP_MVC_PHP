@@ -1,0 +1,23 @@
+<h1>New User</h1>
+<pre>
+<?php print_r($data) ?>
+</pre> 
+<p>
+   
+</p>
+<form method="POST">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" required class="form-control" id="name" name="name" value="<?= $data['user']['name']; ?>">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" required class="form-control" id="email" name="email" value="<?= $data['user']['email']; ?>">
+    <label for="roles" class="form-label">Roles</label>
+    <select name="roles" id="roles">
+  <option value='["ROLE_MEMBER"]'>Member</option>
+  <option value='["ROLE_MEMBER","ROLE_EDITOR"]'>Editor</option>
+  <option value='["ROLE_MEMBER","ROLE_EDITOR","ROLE_ADMIN"]'>Admin</option>
+</select>
+    
+    <button class="mt-4 btn btn-primary" type="submit" id="edit" name="edit">Send</button>
+  </div>
+</form>
